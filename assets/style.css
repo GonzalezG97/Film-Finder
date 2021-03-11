@@ -1,3 +1,23 @@
-.brand-logo{
-    @extend .blue-text, .text-lighten-4;
+.brand-logo {
+    font-family: 'Fascinate', cursive;}
+#Disclaimer {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Fascinate', cursive;
+    color: darkseagreen;
+}
+#watchlist {
+    text-emphasis: bold;
+    background-origin: padding-box;
+    
+}
+.container {
+    border-color:#9ccc65;
+    border-style:solid;
+    border-width: medium;
+
+
+}
+.green-text {
+    font-family: 'Comfortaa';
 }
