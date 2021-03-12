@@ -4,20 +4,26 @@ var nyKey = 'TTYU09cHbS77MqlmFfWwC8unridSAyP2';
 
 
 $(document).ready(function(){$(document).click(function(event){
-    event.preventDefault();
+    
     var userChoice = event.target.id
+    console.log(userChoice);
     $.ajax({
         url: `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${userChoice}`          
     }).then(function(response){
-        var movies = response.results;
-        console.log(movies);
-        $.each(movies, function(index, movie){
+        var genre = response.results;
+        console.log(genre);
+        $.each(genre, function(index, movies){
             
-            const { title, overview} = movie;
+            const { title, overview} = movies;
             
-            $('#watchList').append('<div>' + title + '<br>' + overview + '</div>' + '<br>');
+            $('#displayDiv').append('<section>' + title + '</section>' + '<div>' + overview + '<br>' + '<button>' + 'Save' + '</button>' +'</div>' + '<br>');
+
+            
         });
+        
+        
     });
     
 
 })});
+
