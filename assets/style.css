@@ -1,3 +1,7 @@
+
+.nav-wrapper{
+    box-shadow: 5px 10px;
+}
 .brand-logo {
     font-family: 'Fascinate', cursive;}
 #Disclaimer {
@@ -20,4 +24,15 @@
 }
 .green-text {
     font-family: 'Comfortaa';
+}
+#displayDiv{
+    border: solid;
+    color: #9ccc65;
+    padding-top: 500px;
+  padding-right: 3px;
+  padding-bottom: 500px;
+  padding-left: 80px;
+}
+.Animated{
+    align-items: center;
 }
