@@ -1,14 +1,23 @@
+// Getting a handle on the api keys
 var tmdbKey = 'cae9a497d1eb142f3801452347747341';
 
 var nyKey = 'TTYU09cHbS77MqlmFfWwC8unridSAyP2';
 
+// Empty array for wathlist
 var watchList = [];
 
+var retrievedData = localStorage.getItem('Watchlist');
+           
+    $('#savedMovies').append(retrievedData);
+
 $(document).ready(function(){
+    
+
     $('.genreMovie').click(
         function(event){
-    
+    // Grabbing the user choice via ID
     var userChoice = event.target.id
+    
     
     $.ajax({
         url: `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${userChoice}`          
@@ -18,6 +27,8 @@ $(document).ready(function(){
         console.log(genre);
 
         $('#displayDiv').empty();
+
+        
 
         for (var i = 0; i < genre.length; i++ ){
             const {title, overview} = genre[i];  
@@ -52,9 +63,14 @@ $(document).ready(function(){
         });
 
         
+        
     });
+
     
-    JSON.parse(localStorage.getItem('Watchlist')).appendTo('#displayDiv');
+    // var retrievedData = localStorage.getItem('Watchlist')
+    // var loadWatchlist = JSON.stringify(retrievedData).slice();
+    // console.log(retrievedData);
+    // loadWatchlist.appendTo('#savedMovies');
 
 })});
 
