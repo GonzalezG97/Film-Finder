@@ -63,7 +63,15 @@ $(document).ready(function(){
         });
 
         
-        
+        $('#reviewBtn').click(function(){
+            var movieTitle = response.results
+            console.log(movieTitle)
+            $.ajax({
+                url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${nyKey}`
+            })
+            console.log(movieTitle)
+        });
+
     });
 
 
