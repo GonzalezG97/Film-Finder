@@ -6,30 +6,30 @@ var nyKey = 'TTYU09cHbS77MqlmFfWwC8unridSAyP2';
 // Empty array for wathlist
 var watchList = [];
 
-var retrievedData = localStorage.getItem('Watchlist');
-           
-    $('#savedMovies').append(retrievedData);
+// Retriving data from local storage
+var retrievedData = localStorage.getItem('Watchlist');           
+$('#savedMovies').append(retrievedData);
 
-$(document).ready(function(){
-    
 
+$(document).ready(function(){  
     $('.genreMovie').click(
         function(event){
+
     // Grabbing the user choice via ID
     var userChoice = event.target.id
     
-    
+    // API Call
     $.ajax({
         url: `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${userChoice}`          
     }).then(
         function(response){
         var genre = response.results;
-        console.log(genre);
+        // console.log(genre);
 
         $('#displayDiv').empty();
 
         
-
+            // For loop to load api and create elements
         for (var i = 0; i < genre.length; i++ ){
             const {title, overview} = genre[i];  
                    
@@ -52,7 +52,7 @@ $(document).ready(function(){
            
         };
         
-        
+        // Function to save to wathlist and local storage
         $('.saveBtn').click(function(){
             let data = $(this).data();
             
@@ -66,11 +66,7 @@ $(document).ready(function(){
         
     });
 
-    
-    // var retrievedData = localStorage.getItem('Watchlist')
-    // var loadWatchlist = JSON.stringify(retrievedData).slice();
-    // console.log(retrievedData);
-    // loadWatchlist.appendTo('#savedMovies');
+
 
 })});
 
