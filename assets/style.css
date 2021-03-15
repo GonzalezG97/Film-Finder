@@ -21,3 +21,26 @@
 .green-text {
     font-family: 'Comfortaa';
 }
+#displayDiv{
+    border: solid;
+    color: #9ccc65;
+    padding-top: 50px;
+  padding-right: 3px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+h1{
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Comfortaa';
+    color: darkseagreen; 
+    border-color:#9ccc65;
+    border-style:dotted;
+    border-width: medium;
+}
+.movieListItem{
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Comfortaa';
+    color: darkseagreen;
+}
