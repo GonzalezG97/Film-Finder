@@ -40,7 +40,7 @@ $(document).ready(function(){
 
            moviesSelection.append(`<h1 id='titleLoad'>${title}</h1>`);
 
-           moviesSelection.append(`<button id='reviewBtn'>Review</button>`);
+           moviesSelection.append(`<button id='reviewBtn' data-title='${genre[i].title}'>Review</button>`);
 
            moviesSelection.append(`<p id='overLoad'>${overview}</p>`);
 
@@ -61,20 +61,28 @@ $(document).ready(function(){
            localStorage.setItem('Watchlist', watchList); 
            
         });
-
+        
         
         $('#reviewBtn').click(function(){
-            var movieTitle = response.results
-            console.log(movieTitle)
-            $.ajax({
-                url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${nyKey}`
+            var movieTitle = $(this).data();
+        $.ajax({
+            url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${nyKey}`
+        }).then(
+            function(response){
+           console.log(response.results)
             })
-            console.log(movieTitle)
+            
+            console.log(`${JSON.stringify(movieTitle).slice()}`);
+            });
+        
+            
+            
+            
         });
 
     });
 
 
 
-})});
+});
 
