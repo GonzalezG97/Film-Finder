@@ -55,7 +55,6 @@ $(document).ready(function(){
         // Function to save to wathlist and local storage
         $('.saveBtn').click(function(){
             let data = $(this).data();
-            
            $(`<p>${JSON.stringify(data).slice()}</p>`).appendTo('#savedMovies');
            watchList.push(`${JSON.stringify(data).slice()}`);
            localStorage.setItem('Watchlist', watchList); 
@@ -64,15 +63,16 @@ $(document).ready(function(){
         
         
         $('#reviewBtn').click(function(){
-            var movieTitle = $(this).data();
-        $.ajax({
+            var movieTitle = $(this).attr('data-title')
+
+            $.ajax({
             url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${nyKey}`
         }).then(
             function(response){
            console.log(response.results)
             })
             
-            console.log(`${JSON.stringify(movieTitle).slice()}`);
+            console.log(movieTitle);
             });
         
             
