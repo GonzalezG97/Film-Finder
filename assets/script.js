@@ -1,7 +1,3 @@
-// Getting a handle on the api keys
-var tmdbKey = 'cae9a497d1eb142f3801452347747341';
-
-var nyKey = 'TTYU09cHbS77MqlmFfWwC8unridSAyP2';
 
 // Empty array for wathlist
 var watchList = [];
@@ -20,7 +16,7 @@ $(document).ready(function(){
     
     // API Call
     $.ajax({
-        url: `https://api.themoviedb.org/3/discover/movie?api_key=${tmdbKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${userChoice}`          
+        url: `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.tmdbKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${userChoice}`          
     }).then(
         function(response){
         var genre = response.results;
@@ -66,7 +62,7 @@ $(document).ready(function(){
             var movieTitle = $(this).attr('data-title')
 
             $.ajax({
-            url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${nyKey}`
+            url: `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieTitle}&api-key=${process.env.nyKey}`
         }).then(
             function(response){
            console.log(response.results)
