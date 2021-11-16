@@ -1,11 +1,29 @@
-# project1-film-finder
+# Film-Finder
 
-User Story: As a film buff, I want to create an application that will find movies for me based on genre, so that I can know if the movie is worth the watch.
+## Description 
+
+As an avid movie watcher, I wanted to create an application that will find new movies based on genre.
+
+## Table of Contents
 
 
-Project Description: Our application shows a list of movies based on selected genres:  horror, comedy, romance, action, and animated. Once the user selects a genre they are  given a list of movies fitting that genre specification. The user will then be able to save movies to a “watch list”.
+* [Description](#description)
+* [Usage](#usage)
+* [Credits](#credits)
 
 
-Link to deployed Application: https://GonzalezG97.github.io/project1-film-finder/
+## Usage
 
-![gonzalezg97 github io_project1-film-finder_](https://user-images.githubusercontent.com/76696641/111244314-a7cf3b00-85d0-11eb-984a-2032e2c08488.png)
+This application shows a list of movies based on selected genres:  horror, comedy, romance, action, and animated. Once the genre is selected a list of movies fitting that genre will render. Will then be able to save movies to a “Watch List”.
+
+[App](https://GonzalezG97.github.io/project1-film-finder/)
+
+![FilmFinder](https://live.staticflickr.com/65535/51181692463_6da8040753_c.jpg)
+
+## Credits
+
+[JQuery](https://jqueryui.com/)
+
+[Materialize](https://materializecss.com/)
+
+[JavaScript](https://javascript.info/document)
