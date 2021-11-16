@@ -22,8 +22,8 @@ This application shows a list of movies based on selected genres:  horror, comed
 
 ## Credits
 
-https://jqueryui.com/
+[JQuery](https://jqueryui.com/)
 
-https://materializecss.com/
+[Materialize](https://materializecss.com/)
 
-https://javascript.info/document
+[JavaScript](https://javascript.info/document)
