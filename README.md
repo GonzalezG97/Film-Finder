@@ -4,8 +4,17 @@
 
 As an avid movie watcher, I wanted to create an application that will find new movies for me based on genre.
 
+## Table of Contents
 
-Project Description: Our application shows a list of movies based on selected genres:  horror, comedy, romance, action, and animated. Once the user selects a genre they are  given a list of movies fitting that genre specification. The user will then be able to save movies to a “watch list”.
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Questions](#questions)
+
+
+## Usage
+This application shows a list of movies based on selected genres:  horror, comedy, romance, action, and animated. Once the genre is selected a list of movies fitting that genre will render. Will then be able to save movies to a “Watch List”, to keep track of them.
 
 
 Link to deployed Application: https://GonzalezG97.github.io/project1-film-finder/
