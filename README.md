@@ -2,15 +2,14 @@
 
 ## Description 
 
-As an avid movie watcher, I wanted to create an application that will find new movies for me based on genre.
+As an avid movie watcher, I wanted to create an application that will find new movies based on genre.
 
 ## Table of Contents
 
 
-* [Installation](#installation)
+* [Description](#description)
 * [Usage](#usage)
 * [Credits](#credits)
-* [Questions](#questions)
 
 
 ## Usage
@@ -19,12 +18,12 @@ This application shows a list of movies based on selected genres:  horror, comed
 
 [App](https://GonzalezG97.github.io/project1-film-finder/)
 
+![FilmFinder](https://live.staticflickr.com/65535/51181692463_6da8040753_c.jpg)
+
 ## Credits
 
-*https://jqueryui.com/
+https://jqueryui.com/
 
-*https://materializecss.com/
+https://materializecss.com/
 
-*https://javascript.info/document
-
-![gonzalezg97 github io_project1-film-finder_](https://user-images.githubusercontent.com/76696641/111244314-a7cf3b00-85d0-11eb-984a-2032e2c08488.png)
+https://javascript.info/document
